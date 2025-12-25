@@ -14,3 +14,8 @@ driver.close()'''
 
 
 
+chr_options = Options()
+chr_options.add_experimental_option('detach', True)
+# Automatically install and use the correct ChromeDriver
+service = Service(ChromeDriverManager().install())
+driver = webdriver.Chrome(service=service)
