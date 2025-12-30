@@ -12,8 +12,9 @@ chr_options.add_experimental_option('detach', True)
 
 serv_object =Service(executable_path=r"C:\browserdrivers\chromedriver.exe")
 driver =webdriver.Chrome(service=serv_object, options=chr_options)
-driver.get("https://www.amazon.in/")
 driver.maximize_window()
+driver.get("https://www.amazon.in/")
+
 driver.find_element(By.CLASS_NAME,"a-button-text").click()
 
 wait = WebDriverWait(driver, 10)
